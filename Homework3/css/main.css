@@ -1,0 +1,18 @@
+ul{
+  list-style-type: none;
+}
+.footer {
+
+}
+.options{
+  width: 50%;
+}
+.option{
+  padding-bottom: 5px;
+}
+.active, .w3-btn:hover{
+  background-color: red!important;
+}
+.result{
+  display: none;
+}
