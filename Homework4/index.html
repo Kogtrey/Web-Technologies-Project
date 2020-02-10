@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Choose Your Own Adventure</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../CSS/w3.css">
+  </head>
+  <body>
+    <div class="header w3-container w3-blue w3-center">
+      <h1>Choose your Own Adventure</h1>
+    </div>
+    <div class="main-body">
+      <p>You are walking North on a lonely highway when you spot a cave on the mountainside to your west. What do you do?</p>
+
+      <div id="options">
+        <ul class="options">
+          <li><span id="Cave" class="w3-btn option"> Go to the cave</span></li>
+          <li><span id="Walk" class="w3-btn option"> Keep walking down the road</span></li>
+          <li><span id="Die" class="w3-btn option active"> Curl up in a ball on the road and eventually starve to death</span></li>
+        </ul>
+      </div>
+      <div id="cave" class="result w3-gray w3-container">
+        <p>You go into the cave with no way to protect yourself. You were just coming home from school and you are certainly not a warrior. A laviathan class dragon that lives in the depths of this cave crushes you in seconds</p>
+        <img src="./imgs/Dragon.jpeg" alt="dragon">
+      </div>
+
+      <div id="walk" class="result w3-gray w3-container walk">
+        <p>"Seeing as I am just coming home from school there is no need to go into the cave", you think. So you safely make your way home to your family.</p>
+        <img src="./imgs/Road.jpeg" alt="Road">
+      </div>
+
+      <div id="die" class="result w3-gray w3-container die">
+        <p>Panicking as you do with many decisions, you curl up on the road. Many people drive by you not bothering to stop. You were almost home but you are not brave enough to stand back up and walk. You eventually die of starvation.</p>
+        <img src="./imgs/CurledUp.jpeg" alt="CurledUp">
+      </div>
+
+    </div>
+
+
+    </div>
+  </body>
+
+  <script src="./js/main.js" charset="utf-8"></script>
+</html>
