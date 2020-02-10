@@ -16,7 +16,7 @@ ul{
   float: left;
 }
 .active, .w3-btn:hover{
-  background-color: red!important;
+  background-color: #ddd!important;
 }
 .result{
   display: none;

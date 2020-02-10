@@ -49,6 +49,19 @@ var moreQuestions = {
     }
   }
 }
+function sendInput(){
+  userInput = document.getElementById("userAnswerA").value;
+  if(userInput == "fight"){
+    document.getElementById("optionsA").classList.toggle("hide");
+    document.getElementById("resultA1").style.display = "none";
+    document.getElementById("resultA2").style.display = "block";
+  }
+  else if (userInput == "run") {
+    document.getElementById("optionsA").classList.toggle("hide");
+    document.getElementById("resultA2").style.display = "none";
+    document.getElementById("resultA1").style.display = "block";
+  }
+}
 
 var options = document.getElementsByClassName('option');
 for(var i=0; i < options.length;i++){
@@ -75,16 +88,6 @@ for(var i=0; i < options.length;i++){
         document.getElementById("optionsinitial").classList.toggle("hide");
         document.getElementById("resultI3").style.display = "block";
         document.getElementById("optionsC").style.display = "block";
-        break;
-      case "optionA1":
-        document.getElementById("optionsA").classList.toggle("hide");
-        document.getElementById("resultA2").style.display = "none";
-        document.getElementById("resultA1").style.display = "block";
-        break;
-      case "optionA2":
-        document.getElementById("optionsA").classList.toggle("hide");
-        document.getElementById("resultA1").style.display = "none";
-        document.getElementById("resultA2").style.display = "block";
         break;
       case "optionB1":
         document.getElementById("optionsB").classList.toggle("hide");
@@ -115,10 +118,6 @@ for(var i=0; i < options.length;i++){
 
 function setActiveButton(thisElement) {
   var current = document.getElementsByClassName('active');
-  for(var i =0; i<current.length;i++){
-    if(current[i].style.display != "block"){
-      current[i].className = current[i].className.replace(' active','');
-    }
-  }
+  current[0].className = current[0].className.replace(' active','');
   thisElement.className += ' active';
 }
