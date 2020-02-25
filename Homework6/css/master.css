@@ -1,0 +1,38 @@
+button{
+  border-style: none;
+}
+
+.content{
+  margin: 15% 20% 0 20%;
+}
+.info-content{
+  margin:10% 20% 0 20%;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #909090;
+  padding: 10px;
+}
+.info-content input{
+  text-align: center;
+  width: 100%;
+  border-style: dotted;
+  border-width: 0 0 thin 0;
+}
+.info-content button:hover{
+  border-style: none;
+  background-color: green;
+  color: white;
+}
+.pane{
+  width: 205px;
+  height: 205px;
+  padding: 6px;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px #888888;
+}
+.pane:hover{
+  cursor: pointer;
+  background-color: green;
+}
