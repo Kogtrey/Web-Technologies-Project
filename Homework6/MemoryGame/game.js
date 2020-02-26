@@ -2,6 +2,9 @@
 
 var images_blank = [];
 var images_real = [];
+const blank = "../imgs/blank.png"
+var attempts = 0;
+
 var content = document.getElementById("Content")
 /**
  * Randomly shuffle an array
@@ -29,16 +32,28 @@ var shuffle = function (array) {
 	return array;
 
 };
+function none(){
+
+}
+
+// https://www.sitepoint.com/delay-sleep-pause-wait/
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
 
 for (var i = 0; i < 10; i++) {
   var div = document.createElement("div");
   div.classList.add("pane");
   var img = document.createElement("img");
   img.id = i;
-  img.src = "../imgs/blank.png";
+  img.src = blank;
   img.width  = 200;
   img.height = 200;
-  img.setAttribute("onclick", "ChangeImage(this.id)");
+  img.setAttribute("onclick", "flip(this.id)");
   div.appendChild(img);
 
   images_blank[i] = div;
@@ -58,7 +73,46 @@ for (var i = 0; i < 10; i++) {
 
 var flipped = []
 function flip(id){
-  flipped.push(id);
+  if(!flipped.includes(id)){
+      flipped.push(id);
+  }
+
+  updateImage(id);
+  if(flipped.length==2){
+    var img1 = document.getElementById(flipped[0]);
+    var img2 = document.getElementById(flipped[1]);
+    new Promise(resolve => setTimeout(changeImage,500,img1,img2));
+    attempts++;
+  }
+}
+function updateImage(id){
   var img = document.getElementById(id);
   img.src = images_real[id];
+}
+function changeImage(img1,img2) {
+  if(flipped[0]%5 == flipped[1]%5){
+    console.log("The same");
+    img1.style.visibility = "hidden";
+    img2.style.visibility = "hidden";
+    flipped = [];
+  }else{
+    flipped =[];
+    img1.src = blank;
+    img2.src = blank;
+  }
+  if (checkWin()){
+    var info = JSON.parse(localStorage.getItem("information"));
+    info["attempts"] = attempts;
+    localStorage.setItem("information",JSON.stringify(info));
+    window.location = '../finalPage.html';
+  }
+}
+function checkWin(){
+  for (var i = 0; i < 10; i++) {
+    img = document.getElementById(i);
+    if(img.style.visibility != "hidden"){
+      return false;
+    }
+  }
+  return true;
 }
