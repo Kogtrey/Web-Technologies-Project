@@ -11,6 +11,6 @@ function setInfo() {
 	info['age'] = document.getElementsByName('age')[0].value;
 	infoAsJSON = JSON.stringify(info);
 	console.log(infoAsJSON);
-	localStorage.setItem("information",JSON.stringify(info))
-	window.location = './MemoryGame/'
+	localStorage.setItem("information",JSON.stringify(info));
+	window.location = './MemoryGame/';
 }
