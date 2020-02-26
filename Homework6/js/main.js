@@ -12,4 +12,5 @@ function setInfo() {
 	infoAsJSON = JSON.stringify(info);
 	console.log(infoAsJSON);
 	localStorage.setItem("information",JSON.stringify(info))
+	window.location = './MemoryGame/'
 }
