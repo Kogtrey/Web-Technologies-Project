@@ -11,7 +11,9 @@ $(document).ready(function() {
 
       var div = document.getElementById('content')
       for(var i=0; i < people.length; i++){
-        div.appendChild(document.createElement("h2").innerHTML = people[i])
+        var h2 = document.createElement("h2");
+        h2.innerHTML = people[i];
+        div.appendChild(h2)
       }
     });
   });
