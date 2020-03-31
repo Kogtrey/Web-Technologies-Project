@@ -6,7 +6,7 @@ $(document).ready(function() {
       json = JSON.parse(responseTxt);
       for (var p in json.people) {
         if (json.people.hasOwnProperty(p)) {
-          people.append(p.name)
+          people.push(p.name)
         }
       }
       console.log(people);
