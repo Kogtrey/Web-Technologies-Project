@@ -5,7 +5,7 @@ $(document).ready(function() {
     $(document).load("./data/spacepeople.json", function(responseTxt,statusTxt,xhr){
       json = JSON.parse(responseTxt);
       for (var p in json.people) {
-        if (object.hasOwnProperty(p)) {
+        if (json.people.hasOwnProperty(p)) {
           people.append(p.name)
         }
       }
