@@ -10,7 +10,8 @@
       $(document).ready(function() {
         $("button").click(function() {
           $("#spacePeople").load("./data/spacepeople.json", function(responseTxt,statusTxt,xhr){
-            console.log(xhr)
+            json = parseJson(responseTxt);
+            console.log(json);
           });
         })
       })
