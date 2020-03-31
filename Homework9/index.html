@@ -9,10 +9,8 @@
     <script>
       $(document).ready(function() {
         $("button").click(function() {
-          $("#spacePeople").load("./data/spacepeople.json", function(responseTxt){
-            for(p in responseTxt["people"]){
-              console.log(p)
-            }
+          $("#spacePeople").load("./data/spacepeople.json", function(responseTxt,xhr){
+            console.log(xhr)
           });
         })
       })
