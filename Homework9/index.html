@@ -10,7 +10,9 @@
       $(document).ready(function() {
         $("button").click(function() {
           $("#spacePeople").load("./data/spacepeople.json", function(responseTxt){
-            console.log(responseTxt)
+            for(p in responseTxt["people"]){
+              console.log(p.name)
+            }
           });
         })
       })
