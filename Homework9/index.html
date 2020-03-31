@@ -9,7 +9,7 @@
     <script>
       $(document).ready(function() {
         $("button").click(function() {
-          console.log("Hello");
+          console.log(load("./data/spacepeople.json"));
           $("#spacePeople").load("./data/spacepeople.json");
         })
       })
