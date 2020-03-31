@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/master.css">
+    <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("button").click(function() {
+          console.log("Hello");
+          $("#spacePeople").load("./data/spacepeople.json");
+        })
+      })
+    </script>
+  </head>
+  <body>
+
+    <div id="spacePeople">Pending...</div>
+    <button>Get Number of People in Space</button>
+    <!-- <script src="./js/main.js" charset="utf-8"></script> -->
+  </body>
+</html>
