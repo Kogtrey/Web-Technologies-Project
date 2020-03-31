@@ -6,7 +6,7 @@ $(document).ready(function() {
       json = JSON.parse(responseTxt);
       people.push(json.people[0].name)
       people.push(json.people[1].name)
-      people.pusj(json.people[2].name)
+      people.push(json.people[2].name)
       console.log(people);
       $("#spacePeople").html()
     });
