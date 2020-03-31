@@ -16,8 +16,6 @@ $(document).ready(function() {
         h2.classList.add("person")
         div.appendChild(h2)
       }
-
-      div.innerHTML = "";
     });
   });
 });
