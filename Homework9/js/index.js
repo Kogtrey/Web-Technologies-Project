@@ -8,7 +8,11 @@ $(document).ready(function() {
       people.push(json.people[1].name)
       people.push(json.people[2].name)
       console.log(people);
-      $("#spacePeople").html()
+
+      var div = document.getElementById('content')
+      for(var i=0; i < people.length; i++){
+        div.appendChild(document.createElement("h2").innerHTML = people[i])
+      }
     });
   });
 });
