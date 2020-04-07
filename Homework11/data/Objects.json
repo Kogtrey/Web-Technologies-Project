@@ -1,0 +1,68 @@
+{
+  "W1": {
+    "x": 50,
+    "y": 50,
+    "height": 360,
+    "width": 360,
+    "shape": "rect",
+    "type": "static",
+    "color": "red"
+  },
+  "W2": {
+    "x": 70,
+    "y": 70,
+    "height": 360,
+    "width": 360,
+    "shape": "rect",
+    "type": "static",
+    "color": "red"
+  },
+  "W3": {
+    "x": 90,
+    "y": 90,
+    "height": 360,
+    "width": 360,
+    "shaope": "rect",
+    "type": "static",
+    "color": "red"
+  },
+  "W4": {
+    "x": 110,
+    "y": 110,
+    "height": 360,
+    "width": 360,
+    "shape": "rect",
+    "type": "static",
+    "color": "red"
+  },
+  "W5": {
+    "x": 130,
+    "y": 130,
+    "height": 360,
+    "width": 360,
+    "shape": "rect",
+    "type": "static",
+    "color": "red"
+  },
+  "C1": {
+    "x": 5,
+    "y": 5,
+    "src": "circ",
+    "type": "collect",
+    "color": "yellow"
+  },
+  "C2": {
+    "x": 100,
+    "y": 100,
+    "src": "circ",
+    "type": "collect",
+    "color": "yellow"
+  },
+  "C3": {
+    "x": 30,
+    "y": 30,
+    "src": "circ",
+    "type": "collect",
+    "color": "yellow"
+  }
+}

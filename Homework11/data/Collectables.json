@@ -1,0 +1,20 @@
+{
+  "coin1": {
+    "x": 5,
+    "y": 5,
+    "src": "../imgs/coin.png",
+    "type": "collectable"
+  }
+  "coin2": {
+    "x": 100,
+    "y": 100,
+    "src": "../imgs/coin.png",
+    "type": "collectable"
+  }
+  "coin3": {
+    "x": 30,
+    "y": 30,
+    "src": "../imgs/coin.png",
+    "type": "collectable"
+  }
+}
