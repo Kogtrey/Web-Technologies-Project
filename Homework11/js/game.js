@@ -1,3 +1,5 @@
+console.log("JavaScript Loaded");
+
 class Canvas {
   constructor() {
     this.canvas = document.getElementById("canvas");
@@ -10,26 +12,33 @@ class Canvas {
       this.objs[obj] = objs[obj];
     }
   }
-}
 
-drawObjs(){
-  for(const obj in this.objs){
-    if(obj.shape == 'rect'){
-      this.context.fillStyle = obj.color;
-      this.context.fillRect(obj.x,obj.y,obj.height,obj.width);
-    }else if(obj.shape == "circ"){
-      this.context.fillStyle = obj.color;
-      this.context.arc(obj.x,obj.y,obj.height,obj.width);
+  drawObjs(){
+    for(const obj in this.objs){
+      if(obj.shape == 'rect'){
+        this.context.fillStyle = obj.color;
+        this.context.fillRect(obj.x,obj.y,obj.height,obj.width);
+      }else if(obj.shape == "circ"){
+        this.context.fillStyle = obj.color;
+        this.context.arc(obj.x,obj.y,obj.height,obj.width);
+      }
+      this.context.fill();
     }
-    this.context.fill();
+  }
+
+  clear(){
+    this.context.clearRect(0,0,this.canvas.width,this.canvas.height);
   }
 }
 
-clear(){
-  this.context.clearRect(0,0,this.canvas.width,this.canvas.height);
-}
-
 var canvas = new Canvas();
+
+
+function update(){
+  canvas.clear();
+  canvas.drawObjs();
+  setInterval(update,1000/60);
+}
 
 $(document).ready(function(){
   $.ajax({
@@ -45,14 +54,8 @@ $(document).ready(function(){
     }
   });
 
-  $(this).keypress(function(event)){
+  $(this).keypress(function(event){
     getKey(event);
-  }
+  });
 
 });
-
-function update() {
-  canvas.clear();
-  canvas.drawObjs();
-  setInterval(update,1000/60);
-}
